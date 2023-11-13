@@ -28,7 +28,7 @@ Built with the Next.js 13.5 App Router, tRPC, TypeScript, Prisma & Tailwind
 To get started with this project, run
 
 ```bash
-  git clone https://github.com/PHANTOMGOD2OP/quill_pdf_ai.git
+  git clone https://github.com/PHANTOMGOD2OP/Quill_PDF_AI.git
 ```
 
 and copy the .env.example variables into a separate .env file, fill them out & and that's all you need to get started!
