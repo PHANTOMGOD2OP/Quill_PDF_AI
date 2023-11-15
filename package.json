@@ -39,7 +39,7 @@
     "date-fns": "^2.30.0",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.2",
-    "langchain": "^0.0.153",
+    "langchain": "^0.0.166",
     "lucide-react": "^0.279.0",
     "next": "13.5.2",
     "openai": "^4.10.0",
