@@ -1,5 +1,10 @@
 {
   "name": "quill",
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+    },
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +12,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.1",
