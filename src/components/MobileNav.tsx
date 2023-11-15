@@ -82,11 +82,10 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                 </li>
                 <li className='my-3 h-px w-full bg-gray-300' />
                 <li>
-                  <Link
+                  <LogoutLink
                     className='flex items-center w-full font-semibold'
-                    href='https://quill-pdf-ai.vercel.app/api/auth/logout'>
                     Sign out
-                  </Link>
+                  </LogoutLink>
                 </li>
               </>
             )}
