@@ -5,8 +5,8 @@ import { createUploadthing, type FileRouter } from 'uploadthing/next'
 import { PDFLoader } from 'langchain/document_loaders/fs/pdf'
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai'
 import { PineconeStore } from 'langchain/vectorstores/pinecone'
-import { pinecone } from '@/libs/pinecone'
-import { getUserSubscriptionPlan } from '@/libs/stripe'
+import { pinecone } from '@/lib/pinecone'
+import { getUserSubscriptionPlan } from '@/lib/stripe'
 import { PLANS } from '@/config/stripe'
 
 const f = createUploadthing()
