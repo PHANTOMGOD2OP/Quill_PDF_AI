@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function absoluteUrl(path: string) {
-  return `https://quill-pdf-ai.vercel.app/${path}`
+  return `https://quill-pdf-ai.vercel.app${path}`
 }
 
 export function constructMetadata({
