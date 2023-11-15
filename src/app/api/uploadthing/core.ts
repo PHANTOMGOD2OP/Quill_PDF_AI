@@ -47,7 +47,7 @@ const onUploadComplete = async ({
       userId: metadata.userId,
       url: `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`,
       name: file.name,
-      status: "PROCESSING",
+      status: uploadStatus,
     },
   });
 
@@ -79,7 +79,7 @@ const onUploadComplete = async ({
     if ((isSubscribed && isProExceeded) || (!isSubscribed && isFreeExceeded)) {
       await db.file.update({
         data: {
-          status: "FAILED",
+          status: uploadStatus,
         },
         where: {
           id: createdFile.id,
@@ -88,7 +88,7 @@ const onUploadComplete = async ({
     }
 
     const pineconeIndex = await pinecone
-      .Index("profilehub")
+      .Index("quill")
       .namespace(metadata.userId);
 
     const embeddings = new OpenAIEmbeddings({
