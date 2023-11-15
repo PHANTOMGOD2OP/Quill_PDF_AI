@@ -101,7 +101,7 @@ const onUploadComplete = async ({
 
     await db.file.update({
       data: {
-        uploadSttatus: "SUCCESS",
+        uploadStatus: "SUCCESS",
       },
       where: {
         id: createdFile.id,
