@@ -4,7 +4,7 @@ import { ArrowRight, Menu } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-
+import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/server'
 const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
   const [isOpen, setOpen] = useState<boolean>(false)
 
@@ -84,7 +84,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                 <li>
                   <Link
                     className='flex items-center w-full font-semibold'
-                    href='/sign-out'>
+                    href='https://quill-pdf-ai.vercel.app/api/auth/logout'>
                     Sign out
                   </Link>
                 </li>
