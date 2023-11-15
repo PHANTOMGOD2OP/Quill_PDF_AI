@@ -47,7 +47,7 @@ const onUploadComplete = async ({
       userId: metadata.userId,
       url: `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`,
       name: file.name,
-      status: "uploadStatus",
+      uploadStatus: "PROCESSING",
     },
   });
 
@@ -79,7 +79,7 @@ const onUploadComplete = async ({
     if ((isSubscribed && isProExceeded) || (!isSubscribed && isFreeExceeded)) {
       await db.file.update({
         data: {
-          status: "uploadStatus",
+          uploadStatus: "FAILED",
         },
         where: {
           id: createdFile.id,
@@ -101,7 +101,7 @@ const onUploadComplete = async ({
 
     await db.file.update({
       data: {
-        status: "uploadStatus",
+        uploadSttatus: "SUCCESS",
       },
       where: {
         id: createdFile.id,
@@ -111,7 +111,7 @@ const onUploadComplete = async ({
     console.log("error: ", error);
     await db.file.update({
       data: {
-        status: "uploadStatus",
+        uploadStatus: "FAILED",
       },
       where: {
         id: createdFile.id,
